@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drive - Lane Switching Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="gameContainer">
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+        <div id="ui">
+            <div id="score">Score: 0</div>
+            <div id="gems">Gems: 0</div>
+            <div id="revives">Revives: 0</div>
+        </div>
+        <div id="menu" class="screen">
+            <h1>DRIVE</h1>
+            <p>Use Arrow Keys to Switch Lanes</p>
+            <p>Collect Gems • Avoid Bombs • Survive!</p>
+            <button id="startButton">START GAME</button>
+        </div>
+        <div id="gameOver" class="screen hidden">
+            <h1>GAME OVER</h1>
+            <p id="finalScore">Final Score: 0</p>
+            <p id="reviveOption" class="hidden">Use a Revive? (10 Gems Required)</p>
+            <div id="gameOverButtons">
+                <button id="reviveButton" class="hidden">USE REVIVE</button>
+                <button id="restartButton">TRY AGAIN</button>
+                <button id="menuButton">MAIN MENU</button>
+            </div>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>

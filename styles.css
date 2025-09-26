@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+#gameContainer {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+#gameCanvas {
+    display: block;
+    background: #2d2d2d;
+    border: 3px solid #333;
+}
+
+#ui {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 10;
+    pointer-events: none;
+}
+
+#ui div {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    border: 2px solid #4a90e2;
+}
+
+#score {
+    color: #4a90e2;
+}
+
+#gems {
+    color: #50c878;
+}
+
+#revives {
+    color: #ff6b6b;
+}
+
+.screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.screen.hidden {
+    display: none;
+}
+
+.screen h1 {
+    font-size: 4em;
+    margin-bottom: 20px;
+    color: #4a90e2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.screen p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+button {
+    background: linear-gradient(45deg, #4a90e2, #357abd);
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3);
+}
+
+button:hover {
+    background: linear-gradient(45deg, #357abd, #2861a3);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(74, 144, 226, 0.5);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+#gameOverButtons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#reviveButton {
+    background: linear-gradient(45deg, #50c878, #3a9b5c);
+}
+
+#reviveButton:hover {
+    background: linear-gradient(45deg, #3a9b5c, #2d7a45);
+}
+
+#reviveOption {
+    color: #50c878;
+    font-weight: bold;
+}
+
+.hidden {
+    display: none !important;
+}
+
+@media (max-width: 850px) {
+    #gameCanvas {
+        width: 90vw;
+        height: auto;
+    }
+    
+    .screen h1 {
+        font-size: 2.5em;
+    }
+    
+    button {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+}
